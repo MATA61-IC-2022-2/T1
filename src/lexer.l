@@ -15,9 +15,40 @@ typedef enum {
 
 %%
 
+\n
+\t 
+. {return ERROR;}
 
+"do"     {return KEY;}
+"else"   {return KEY;}
+"if"     {return KEY;}
+"int"    {return KEY;}
+"return" {return KEY;}  
+"void"   {return KEY;}
+"while"  {return KEY;}
 
+"+"  {return SYM;}
+"-"  {return SYM;}
+"*"  {return SYM;}
+"/"  {return SYM;}
+"<"  {return SYM;}
+">"  {return SYM;}
+"="  {return SYM;}
+";"  {return SYM;}
+","  {return SYM;}
+"("  {return SYM;}
+")"  {return SYM;}
+"["  {return SYM;}
+"]"  {return SYM;}
+"{"  {return SYM;}
+"}"  {return SYM;}
+"<=" {return SYM;}
+">=" {return SYM;}
+"==" {return SYM;}
+"!=" {return SYM;}
 
+[a-zA-Z_][a-zA-Z0-9_]* {return ID;}
+[-+]?([0-9]*\.?[0-9]+|[0-9]+\.)  {return NUM;}
 
 %%
 
